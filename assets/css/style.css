@@ -1,0 +1,621 @@
+* {
+    background-color: rgb(240, 240, 240);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 0px;
+    
+}
+header {
+    background-color: crimson;
+    margin-bottom: 25px;
+    padding-left: 5px;
+}
+#subtitulo-header {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+nav {
+    background-color: crimson;
+    color: antiquewhite;
+    min-height: 50px;
+    max-height: 55px;
+    padding-top: 10px;
+}
+body {
+    margin: 0;
+}
+footer {
+    margin-left: -15px;
+    margin-top: 50px;
+    min-height: 200px;
+    background-color: crimson;
+    color: antiquewhite;
+}
+q {
+    margin-left: 15px;
+    background-color: yellow;
+}
+h1 {
+    background-color: crimson;
+    color: lightyellow;
+    text-align: center;
+    font-size: xxx-large;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
+h2 {
+    background-color: crimson;
+    color: white;
+    margin-left: 0;
+    padding-left: 5%;
+    width: auto;
+    height: 35px;
+    font-style: italic ;
+}
+/*  h3 está junto ao fontes para teste lá em baixo  */
+p, strong {
+    background-color: transparent;
+    padding-left: 10px;
+}
+
+li, ul  {
+    background-color: transparent;
+
+}
+button {
+    border: 1px solid antiquewhite;
+    background-color: antiquewhite;
+    color: crimson;
+    padding: 0%;
+    margin: 0;
+    font-size: 100%;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 10%;
+    height: 40px;
+}
+button:hover {
+    border: 1px solid rgb(173, 9, 42);
+    background-color: rgb(173, 9, 42);
+    color: white;
+    
+}
+
+#aula-01, #aula-03, #aula-05, #aula-07 {
+    background-color: rgb(220, 220, 220);
+    border-radius: 15px 15px 0px 0px;
+    padding-top: 5px;
+    max-width: 70%;
+    margin-left: 4%;
+}
+#aula-02, #aula-04, #aula-06, #aula-08 {
+    background-color: rgb(220, 220, 220);
+    border-radius: 15px 15px 0px 0px;
+    padding-top: 5px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+
+
+/*
+    ANTES DAQUI, APENAS CONFIGURAÇÃO DOS ELEMENTOS
+    PRINCIPAIS DA PÁGINA.
+
+
+    A PARTIR DAQUI COMEÇAM AS AULAS
+
+*/
+
+
+
+
+
+/* Cores */
+#pre-definidas {
+    color: indianred;
+}
+#current-color{
+    color: orange;
+    border: 2px solid currentColor;
+}
+#hex {
+    color: #2125f2;
+}
+#hex-transparencia {
+    color: #2125f268;
+}
+#rgb {
+    color: rgb(10, 128, 30);
+}
+/*  RGBA é o mesmo RGB porém adiciona o canal alpha (último elemento) 
+    (de 0.0 -> 1.0) para transparência
+    OBS: O mesmo serve para HEX
+*/
+#rgba {
+    color: rgba(10, 128, 30, 0.5);
+}
+#hsl {
+    background-color: hsl(45, 80%, 70%);
+}
+#hsla {
+    background-color: hsla(45, 80%, 70%, .35);
+}
+
+
+/*  Imagens (object-fit)  */
+code {
+    margin: auto;
+    color: black;
+    background-color: transparent;
+}
+div.object-fit {
+    margin: auto;
+    width: 200px;
+    height: 300px;
+    border: 5px solid darkred;
+}
+img {
+    padding-left: 0%;
+    width: 100%;
+    height: 100%;
+}
+#contain {
+    object-fit: contain;
+}
+#cover {
+    object-fit: cover;
+}
+#none {
+    object-fit: none;
+}
+#scale-down {
+    object-fit: scale-down;
+}
+/*  Imagens (object-position)  */
+div.object-position {
+    margin: auto;
+    width: 200px;
+    height: 300px;
+    border: 5px solid darkblue;
+}
+#object-position {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: fill;
+    object-position: 0px 0px;
+}
+
+/*   Fundo dos elementos  */
+.img-01 {
+    width: 200px;
+    height: 200px;
+    background-color: palevioletred;
+    background-image: url('../images/london.jpg');
+}
+.img-02 {
+    width: 200px;
+    height: 200px;
+    background-color: palevioletred;
+    background-image: linear-gradient( lightsalmon, crimson);
+}
+.img-03 {
+    width: 200px;
+    height: 200px;
+    background-color: palevioletred;
+    background-image: repeating-linear-gradient(to top, red 0 20px, white 20px 40px);
+}
+
+/*   Redimensionando os elementos  */
+
+#img-cover {
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/eiffel.jpg');
+    background-size: cover;
+}
+#img-contain {
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/eiffel.jpg');
+    background-size: contain;
+}
+#img-tamanho {
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/eiffel.jpg');
+    background-size: 100%;
+}
+#img-x-y {
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/eiffel.jpg');
+    background-size: 100px 100px;
+}
+#img-camadas {
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/incrivel.png'), url('/assets/images/eiffel.jpg');
+    background-size: 40px 100%, cover;
+}
+/*   Repetição dos elementos  */
+.repeticao{
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/incrivel.png'), url('/assets/images/eiffel.jpg');
+    
+}
+#img-repeticao {
+    background-size: 40px 70%, cover;
+    background-position: 0%;
+    background-repeat: repeat;
+}
+#img-repeticao-x {
+    background-size: 40px 70%, cover;
+    background-position: 0%;
+    background-repeat: repeat-x;
+}
+#img-repeticao-y {
+    background-size: 40px 40%, cover;
+    background-position: 0%;
+    background-repeat: repeat-y;
+}
+#img-repeticao-space {
+    background-size: 60px 70%, cover;
+    background-position: 0%;
+    background-repeat: space;
+}
+#img-repeticao-round {
+    background-size: 60px 70%, cover;
+    background-position: 0%;
+    background-repeat: round;
+}
+#img-repeticao-no-repeat {
+    background-size: 60px 70%, cover;
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+}
+/*   Posição dos elementos  */
+/*   Já utilizado nos exemplos passados,
+        pode ser utilizados as palavras-chave top, bottom, left, right
+
+    background-position: value;
+*/
+/*   Fixação dos elementos  */
+.attachment{
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/eiffel.jpg');
+    background-size: cover;
+    border: 1px solid red;
+    color: white;
+    overflow: auto;
+}
+#fixed {
+    background-attachment: fixed;
+}
+#scroll {
+    background-attachment: scroll;
+}
+#local {
+    background-attachment: local;
+}
+/*   Background Origin dos elementos  */
+.origin{
+    width: 200px;
+    height: 200px;
+    background-image: url('/assets/images/eiffel.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 15px dashed palegreen;
+    padding: 30px;
+}
+#padding {
+    background-origin: padding-box;
+}
+#border {
+    background-origin: border-box;
+}
+#content {
+    background-origin: content-box;
+}
+
+/*   Background Clip dos elementos  */
+.clip{
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+    border: 15px dashed tomato;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+    padding: 30px;
+  
+    background: linear-gradient(315deg, transparent 75%, #d45d55 0)-10px 0,
+    linear-gradient(45deg, transparent 75%, #d45d55 0)-10px 0,
+    linear-gradient(135deg, #a7332b 50%, transparent 0) 0 0,
+    linear-gradient(45deg, #6a201b 50%, #561a16 0) 0 0 #561a16;
+    background-size: 20px 20px;
+}
+#padding-clip {
+    background-clip: padding-box;
+}
+#border-clip {
+    background-clip: border-box;
+}
+#content-clip {
+    background-clip: content-box;
+}
+#content-text {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
+/*   Mesclagem de elementos  */
+.mescla{
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+    border: 15px dashed lightblue;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+    padding: 30px;
+    background-color: lightblue;
+    background-image: url('/assets/images/london.jpg');
+    background-blend-mode: luminosity;
+}
+/*   Background de elementos  */
+.backg{
+    width: 300px;
+    height: 300px;
+    border: 15px dashed lightblue;
+    color: lightblue;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+    padding: 30px;
+
+    background: 
+        url('/assets/images/eiffel.jpg') 
+        top center / 200px 200px no-repeat
+        padding-box
+        content-box
+        grey;
+}
+
+/*   AULA 04 - BORDAS DOS ELEMENTOS  */
+#borda-exe {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background-color: crimson;
+    border-style: solid groove;
+    border-color: purple white;
+    border-width: 5px 5px; /* thin / medium / thick */
+
+}
+#radius {
+    width: 200px;
+    height: 100px;
+    background-color: crimson;
+    margin: auto;
+    border-radius: 10px;
+}
+#circle-rad {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin: auto;
+    border-radius: 50%;
+}
+
+/* Bordas com IMAGEM */
+.exemplo-border-img {
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 15px solid;
+}
+#border-img-01 {
+    border-image-source: url('/assets/images/london.jpg');
+    border-image-slice: 170;
+    border-image-repeat: stretch;
+}
+#border-img-02 {
+    border-image-source: linear-gradient(red, darkred);
+    border-image-slice: 10;
+    border-image-width: 3%;
+    border-image-outset: 10px;
+}
+
+/*   FONTES   */
+
+/*   aqui apenas está sendo configurado   */
+@font-face {
+    font-family: Roboto;
+    src: url('/assets/fonts/Roboto-Black.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Roboto-Italic;
+    src: url('/assets/fonts/Roboto-ThinItalic.ttf');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: Roboto-links;
+    src: url('/assets/fonts/Roboto-BlackItalic.ttf');
+    font-weight: normal;
+}
+h3 {
+    background-color: rgb(200, 200, 200);
+    margin-left: 0;
+    text-align: center;
+    font-family: Roboto;
+}
+h4 {
+    background-color: transparent;
+    margin-left: 0;
+    padding-left: 15px;
+    text-align: left;
+    font-family: Roboto-Italic;
+}
+a {
+    background-color: transparent;
+    margin-left: 0;
+    padding-left: 15px;
+    font-family: Roboto-links;
+    color: darkred;
+}
+strong {
+    background-color: transparent;
+    font-family: Roboto;
+    margin-left: 0;
+}
+#paragrafo-01 {
+    font-family: Roboto;
+}
+#paragrafo-02 {
+    font-family: Roboto-links;
+}
+#paragrafo-03 {
+    font-family: Roboto-Italic;
+}
+/*  Podemos também usar o comando: 
+         @import url('inserir link do site remoto diretamente aqui')
+
+    Desta forma, também irá buscar toda a família de fonte do link.
+    Apenas sendo necessário declarar 'font-weight', 'font-style' e etc 
+    nos atributos específicos de cada página.
+*/
+/*  Testando o 'font-size' e 'font-style'   */
+.teste.fontes, #size-item-01 {
+    font-size: xx-small;
+}
+.teste.fontes, #size-item-02 {
+    font-size: small;
+    font-style: normal;
+}
+.teste.fontes, #size-item-03 {
+    font-size: medium;
+    font-style: oblique;
+}
+.teste.fontes, #size-item-04 {
+    font-size: xx-large;
+    font-style: normal;
+}
+.teste.fontes, #size-item-05 {
+    font-size: 35px;
+    font-style: italic;
+}
+.teste.fontes, #size-item-06 {
+    font-size: 100%;
+}
+/* Testando font-weigth' */
+#weight-lighter{
+    font-weight: lighter;
+}
+#weight-normal{
+    font-weight: normal;
+}
+#weight-bolder{
+    font-weight: bolder;
+}
+
+/* Testando 'line-height' */
+#text-height {
+    line-height: 1.5;
+    text-align: justify;
+}
+/* Testando 'text-overflow' */
+.overflow {
+    background-color: chartreuse;
+    color: black;
+    width: 200px;
+}
+#text-clip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+#text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#text-string {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: 'Ver mais>';
+}
+
+/*
+     AULA 07 - SOMBRAS 
+*/
+/*   Colocando sombra nos elementos  */
+#shadow {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #8f382e;
+    margin: 20px auto;
+    background-color: #fa8072;
+
+    box-shadow: 10px 10px 20px 5px  grey, inset 10px 10px 20px 5px crimson ;
+}
+#london-shadow {
+    width: 200px;
+    height: 400px;
+    margin-left: 20%;
+    object-fit: contain;
+    background-color: transparent;
+    filter: drop-shadow(10px 10px 3px grey);
+}
+/*   Colocando sombra nos textos  */
+#teste-titulo {
+    color: crimson;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 3px grey;
+}
+/*
+     AULA 08 - DIVERSOS 
+*/
+/*   Colocando opacidade nos elementos  */
+.exe-opacity {
+    background-color: yellow;
+    padding: 10px 5px 10px 5px;
+    opacity: 0.6;
+
+
+}
+#london-opacity {
+    width: 300px;
+    height: 200px;
+    object-fit: fill;
+    opacity: .3;
+}
+/* Utilizando a propriedade 'overflow' */
+.exe-overflow {
+    background-color: orange;
+    color: purple;
+    border: 3px solid purple;
+    margin: auto;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: justify;
+
+    overflow: auto;
+}

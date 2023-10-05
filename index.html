@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizações Básicas CSS</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+<body>
+<header>
+    <h1> Estilizações Básicas com CSS</h1>
+        <p id="subtitulo-header">Trilha de CSS - Digital Innovation One (aluno: Hellyton)</p>
+    <nav>
+
+        <a href="#aula-01"><button>Aula-01</button></a>
+        <a href="#aula-02"><button>Aula-02</button></a>
+        <a href="#aula-03"><button>Aula-03</button></a>
+        <a href="#aula-04"><button>Aula-04</button></a>
+        <a href="#aula-05"><button>Aula-05</button></a>
+        <a href="#aula-06"><button>Aula-06</button></a>
+        <a href="#aula-07"><button>Aula-07</button></a>
+        <a href="#aula-08"><button>Aula-08</button></a>
+
+    </nav>  
+</header>
+<main>    
+    
+    <p><strong>NOTA:</strong> Sempre consultar o arquivo <strong>.css</strong> para verificar as 
+        formas de declaração dos estilos.</p>
+    
+    <div id="aula-01">
+        <h2>Aula 01 - Cores</h2>
+        <p>Existem várias formas de definirmos cores utilizando o CSS. Elas são:</p>
+
+        <ul>
+            <li id="pre-definidas">Cores pré-definidas</li>
+            <li id="current-color">Palavra-chave "currentcolor"</li>
+            <li id="hex">Hexadecimal</li>
+            <li id="hex-transparencia">Hexadecimal com transparência</li>
+            <li id="rgb">RGB</li>
+            <li id="rgba">RGBA (com transparência)</li>
+            <li id="hsl">HSL</li>
+            <li id="hsla">HSLA (com transparência)</li>
+        </ul>
+    
+        <hr/>
+            <h3>HSL</h3>
+
+            <p>HSL (hue, saturation, lightness):</p>
+
+            <ul>
+                <li>
+                    <strong>Hue (matiz):</strong> é o grau na roda de cores (de 0 a 360 graus)
+                    <ul>
+                        <li>0 ou 360 é vermelho</li>
+                        <li>120 é verde</li>
+                        <li>250 é azul</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Saturation (saturação):</strong> valor percentual
+                    <ul>
+                        <li>0% um tom de certeza</li>
+                        <li>100% cor total</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Lightness (luminosidade):</strong> luminosidade da cor
+                    <ul>
+                        <li>0% é preto</li>
+                        <li>100% é branco</li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+    <div id="aula-02">
+        <h2>Aula 02 - Imagens</h2>
+
+            <h3>Propriedade <u>object-fit</u></h3>
+
+                <code>object-fit: fill; (valor padrão)</code>
+                
+                <div class="object-fit">
+                    <img src="assets/images/london.jpg" alt="" id="fill">
+                </div>
+                <br>
+                <code>object-fit: contain;</code>
+                <div class="object-fit"> 
+                    <img src="assets/images/london.jpg" alt="" id="contain">
+                </div>
+                <br>
+                <code>object-fit: cover;</code>
+                <div class="object-fit"> 
+                    <img src="assets/images/london.jpg" alt="" id="cover">
+                </div>
+                <br>
+                <code>object-fit: none;</code>
+                <div class="object-fit"> 
+                    <img src="assets/images/london.jpg" alt="" id="none">
+                </div>
+                <br>
+                <code>object-fit: scale-down;</code>
+                <div class="object-fit"> 
+                    <img src="assets/images/london.jpg" alt="" id="scale-down">
+                </div>
+
+            <br>
+            <h3>Propriedade object-position</h3>
+
+                <div class="object-position">
+                    <img src="assets/images/eiffel.jpg" alt="" id="object-position">
+                </div>
+    </div>   
+                <br>
+    <div id="aula-03">
+        <h2>Aula 03 - Fundo dos elementos</h2>
+            
+            <h3>Alterando o fundo dos elementos</h3>
+                <strong>Exemplos:</strong>
+                <p>Utilizando o background-image</p>
+                <div class="img-01"></div>
+                
+                <p>Utilizando o background-image + linear-gradient</p>
+                <div class="img-02"></div>
+
+                <p>Utilizando o background-image + repeating-linear-gradient</p>
+                <div class="img-03"></div>
+
+            <h3>Redimensionando os elementos</h3>
+
+                <p>Utilizando background-size: cover</p>
+                <div id="img-cover"></div>
+
+                <p>background-size: contain</p>
+                <div id="img-contain"></div>
+
+                <p>background-size: tamanho manual</p>
+                <div id="img-tamanho"></div>
+
+                <p>background-size: x-y</p>
+                <div id="img-x-y"></div>
+
+                <p>background-size: camadas</p>
+                <div id="img-camadas"></div>
+
+
+            <h3>Repetição das imagens de fundo</h3>
+
+                <p>background-repeat: repeat</p>
+                <div id="img-repeticao" class="repeticao"></div>
+
+                <p>background-repeat: repeat-x</p>
+                <div id="img-repeticao-x" class="repeticao"></div>
+                
+                <p>background-repeat: repeat-y</p>
+                <div id="img-repeticao-y" class="repeticao"></div>
+
+                <p>background-repeat: space</p>
+                <div id="img-repeticao-space" class="repeticao"></div>
+
+                <p>background-repeat: round</p>
+                <div id="img-repeticao-round" class="repeticao"></div>
+
+                <p>background-repeat: no repeat</p>
+                <div id="img-repeticao-no-repeat" class="repeticao"></div>
+
+            <h3>Propriedade Background Attachment</h3>
+
+                <p>background-attachment: fixed</p>
+                <div id="fixed" class="attachment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque libero, nobis adipisci ipsum 
+                    obcaecati quibusdam delectus facilis quos provident molestias expedita 
+                    temporibus doloribus molestiae eligendi nam porro sit illum quia.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque libero, nobis adipisci ipsum 
+                    obcaecati quibusdam delectus facilis quos provident molestias expedita 
+                    temporibus doloribus molestiae eligendi nam porro sit illum quia.
+                </div>
+
+                <p>background-attachment: scroll</p>
+                <div id="scroll" class="attachment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque libero, nobis adipisci ipsum 
+                    obcaecati quibusdam delectus facilis quos provident molestias expedita 
+                    temporibus doloribus molestiae eligendi nam porro sit illum quia.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque libero, nobis adipisci ipsum 
+                    obcaecati quibusdam delectus facilis quos provident molestias expedita 
+                    temporibus doloribus molestiae eligendi nam porro sit illum quia.
+
+                </div>
+
+                <p>background-attachment: local</p>
+                <div id="local" class="attachment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque libero, nobis adipisci ipsum 
+                    obcaecati quibusdam delectus facilis quos provident molestias expedita 
+                    temporibus doloribus molestiae eligendi nam porro sit illum quia.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque libero, nobis adipisci ipsum 
+                    obcaecati quibusdam delectus facilis quos provident molestias expedita 
+                    temporibus doloribus molestiae eligendi nam porro sit illum quia.
+
+                </div>
+            
+            <h3>Propriedade Background Origin</h3>
+
+                <strong>Exemplos:</strong>
+                <br>
+                <p>backgound-origin: padding-box;</p>
+                <div id="padding" class="origin"></div>
+
+                <p>backgound-origin: border-box;</p>
+                <div id="border" class="origin"></div>
+
+                <p>backgound-origin: content-box;</p>
+                <div id="content" class="origin"></div>
+
+            <h3>Propriedade Background Clip</h3>
+                
+                <p></p>
+                <strong>Exemplos:</strong>
+                <br>
+                <p>backgound-clip: padding-box;</p>
+                <div id="padding-clip" class="clip">Trilha de CSS</div>
+
+                <p>backgound-clip: border-box;</p>
+                <div id="border-clip" class="clip">Trilha de CSS</div>
+
+                <p>backgound-clip: content-box;</p>
+                <div id="content-clip" class="clip">Trilha de CSS</div>
+
+                <p>backgound-clip: text;</p>
+                <div id="content-text" class="clip">Trilha de CSS</div>
+
+            <h3>Mesclagem de Elementos</h3>
+                
+                <p></p>
+                <strong>Exemplos:</strong>
+                <br>
+                <p>Vai depender do valor do elemento e qual cor de fundo
+                    (background-color) está selecionada.</p>
+                <p>background-blend-mode: luminosity;</p>
+                <div id="mescla-exe" class="mescla">Trilha de CSS</div>
+
+            <h3>Propriedade background</h3>
+                
+                <p></p>
+                <strong>Exemplos:</strong>
+                <br>
+                <p></p>
+                <p>background: ;</p>
+                <div id="teste-backg" class="backg">Trilha de CSS</div>
+    </div>
+    <br>
+    <div id="aula-04">
+        <h2>Aula 04 - Bordas</h2>
+            
+            <h3>Tamanho das Bordas</h3>
+                <p>Podemos definir as configurações das nossas bordas através das propriedades:</p>
+
+                <ul>
+                    <li>border-width</li>
+                    <li>border-style</li>
+                    <li>border-color</li>
+                </ul>
+
+            <h3>Exemplo:</h3>
+                <div id="borda-exe"></div>
+
+            <h3>Propriedade Border</h3>
+                <p>Utilizada para escrever as propriedades de uma única vez, basta seguir o 
+                    seguinte comando:
+                </p>
+                <ul>
+                    <li>border: tamanho estilo cor;</li>
+                    <li>border: 10px solid black</li>
+                </ul>
+                <p>Também funciona ao colocar o lado separado,
+                    <strong>'border-bottom'</strong> , por exemplo.</p>
+                <br>
+            
+            <h3>Arredondando os cantos com 'border-radius'</h3>
+                <p>Somente é necessário aplicar o comando seguinte:</p>
+                <ul>
+                    <li>border-radius: tamanho;</li>
+                    <li>border-radius: 10px</li>
+                </ul>
+
+                <p>Exemplo:</p>
+                    <div id="radius"></div>
+                <p><strong>OBS: </strong>Pode ser aplicado para cada canto separadamente.</p>
+            <br>
+                <p>É possível também, fazer um cículo usando este tipo de estilo, 
+                    para isso, é preciso fazer um QUADRADO PERFEITO, e aplicar 50% de radius:
+                </p>
+
+                    <div id="circle-rad"></div>
+            <br>
+
+            <h3>Bordas com Imagens</h3>
+
+                <ul>
+                    <li>border-image-source - fonte da imagem</li>
+                    <li>border-image-width - largura das bordas (funciona como o width normal)</li>
+                    <li>border-image-repeat - repetição da imagem</li>
+                    <li>border-image-outset - o quanto a imagem vai ficar para fora do elemento.</li>
+                    <li>border-image-slice - fatiar a imagem ou não dos lados</li>
+                </ul>
+                
+                <p>Exemplo:</p>
+
+                    <div id="border-img-01" class="exemplo-border-img"></div>
+                    <br>
+                    <div id="border-img-02" class="exemplo-border-img"></div>
+            
+            <br>
+                <p>Há a possibilidade de utilizar somente uma vez a 'border-image' e 
+                    atribuir todos os atributos de uma vez apenas.
+                </p>
+                <ul>
+                    <li>border-image: source  slice / width / outset repeat;</li>
+                    <li>border-image: url('/assets/...') 170 / 10px / 1 round;</li>
+                </ul>
+                <p>Caso você não passe uma das propriedades, ela vai ser definida como um padrão.</p>
+                <br>
+        
+    </div>
+    <br>
+    <div id="aula-05">
+        <h2>Aula 05 - Fontes</h2>
+
+            <h3>Onde encontrar fontes personalizadas?</h3>
+
+                <p>Na tipografia existe os chamados tipos genéricos, também
+                    conhecidos como grupo de fontes, que são:
+                </p>
+                <ul>
+                    <li>Serif;</li>
+                    <li>Sans-Serif;</li>
+                    <li>Display;</li>
+                    <li>Handwriting;</li>
+                    <li>Monospace;</li>
+                </ul>
+
+                <p>O Google Fonts é um catáligo de fontes e ícones de cógido aberto,
+                    mantido pela Google para uso gratuito nos projetos:
+                </p>
+                <a target="_blank" href="https://fonts.google.com/">Google Fonts</a>
+
+            <h3>Testes de fontes</h3>
+
+                <h4>Fontes personalizadas</h4>
+                    <p id="paragrafo-01">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Laboriosam quidem similique, dicta sed repellat, odio porro sapiente 
+                        cupiditate obcaecati voluptatum natus laudantium? 
+                        Suscipit id adipisci repellendus deserunt earum atque perferendis!
+                    </p>
+                    <p id="paragrafo-02">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Laboriosam quidem similique, dicta sed repellat, odio porro sapiente 
+                        cupiditate obcaecati voluptatum natus laudantium? 
+                        Suscipit id adipisci repellendus deserunt earum atque perferendis!
+                    </p>
+                    <p id="paragrafo-03">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Laboriosam quidem similique, dicta sed repellat, odio porro sapiente 
+                        cupiditate obcaecati voluptatum natus laudantium? 
+                        Suscipit id adipisci repellendus deserunt earum atque perferendis!
+                    </p>
+                    <p style="text-align: justify; padding-right: 10px;">
+                        Podemos também usar o comando: 
+                          @import url('inserir link do site remoto diretamente aqui')
+
+                        Desta forma, também irá buscar toda a família de fonte do link.
+                        Apenas sendo necessário declarar 'font-weight', 'font-style' e etc 
+                        nos atributos específicos de cada página.
+                    </p>
+                    <p>
+                        Além da tag @import, também podemos fazer pela tag link no HTML.
+                        Porém não é uma boa prática pois importando direto no CSS, você
+                        mantém atualizados os HTMLs que estão referenciando aquele 
+                        arquivo de estilo.
+                    </p>
+
+                    <p>Testando o atributo <strong>'font-size':</strong></p>
+                    <ul class="teste-fontes">
+                        <li id="size-item-01">Item 1 - font-size: xx-small;</li>
+                        <li id="size-item-02">Item 2 - font-size: small; font-style: normal;</li>
+                        <li id="size-item-03">Item 3 - font-size: medium; font-style: oblique;</li>
+                        <li id="size-item-04">Item 4 - font-size: xx-large; font-style: normal;</li>
+                        <li id="size-item-05">Item 5 - font-size: 35px; font-style: italic;</li>
+                        <li id="size-item-06">Item 6 - font-size: 100%;</li>
+                    </ul>
+            
+            <h3>Propriedade 'font-weight'</h3>                        
+                    
+                <p>Basicamente, altera a espessura do texto.</p>
+                    
+                    <ul>
+                        <li id="weight-lighter">font-weight: lighter</li>
+                        <li id="weight-normal">font-weight: normal</li>
+                        <li id="weight-bolder">font-weight: bolder</li>
+                    </ul>
+                <p>Lembrando que também funciona com núemro em pixels.</p>
+
+            <h3>Propriedade 'font-stretch'</h3>
+
+                <p>Esta propriedade só funciona se a fonte que está sendo
+                    utilizada tem a propriedade.
+                </p>
+                <p>Valores para exemplo (Não está sendo aplicado no estilo):</p>
+                <ul>
+                    <li>font-stretch: ultra-condensed;</li>
+                    <li>font-stretch: extra-condensed;</li>
+                    <li>font-stretch: normal;</li>
+                    <li>font-stretch: expanded;</li>
+                    <li>font-stretch: ultra-expanded;</li>
+
+                </ul>
+
+                <h3>Propriedade 'line-height'</h3>
+
+                    <p><strong>Basicamente, trata-se do espaçamento, (altura). Valor do exemplo em '
+                        1.5'. Sempre em relação ao tamanho do texto, o recomendado é sempre usar 
+                        mínimo com 1.5.</strong></p>
+
+                    <p id="text-height">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellat deleniti quod eos, eius est officia. Nostrum accusamus 
+                        atque nisi tenetur minus, fuga repudiandae corporis mollitia 
+                        consequuntur, omnis totam, odit vitae!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellat deleniti quod eos, eius est officia. Nostrum accusamus 
+                        atque nisi tenetur minus, fuga repudiandae corporis mollitia 
+                        consequuntur, omnis totam, odit vitae!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellat deleniti quod eos, eius est officia. Nostrum accusamus 
+                        atque nisi tenetur minus, fuga repudiandae corporis mollitia 
+                        consequuntur, omnis totam, odit vitae!</p>
+
+
+                <h3>Propriedade resumida 'font'</h3>
+                    
+                    <p>Aceita em linha única de código as seguintes propriedades:</p>
+
+                    <ul>
+                        <li>font-style</li>
+                        <li>font-variant</li>
+                        <li>font-weight</li>
+                        <li>font-size/line-height</li>
+                        <li>font-family</li>
+                    </ul>
+                    <br>
+    </div>
+
+    <br>
+    <div id="aula-06">
+
+        <h2>Aula 06 - Textos</h2>
+            
+            <h3>Propriedade 'text-transform':</h3>
+            
+
+                <p>É responsável por definir quais caracteres vão estar em maiúsculo, 
+                    minúsculo, etc.
+                </p>
+                <p style="text-transform: uppercase;">text-transform: uppercase;</p>
+                <p style="text-transform: lowercase;">text-transform: lowercase;</p>
+                <p style="text-transform: capitalize;">text-transform: capitalize;</p>
+
+            <h3>Propriedade 'text-align'</h3>
+            
+                <p>text-align: left;</p>
+                <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. 
+                    Atque similique architecto totam doloremque, est explicabo, 
+                    eos voluptatibus odit possimus tempora obcaecati quis harum 
+                    dolor vitae itaque ex qui beatae accusamus.</p>
+                <p>text-align: justify;</p>
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. 
+                    Atque similique architecto totam doloremque, est explicabo, 
+                    eos voluptatibus odit possimus tempora obcaecati quis harum 
+                    dolor vitae itaque ex qui beatae accusamus.</p>
+                <p>text-align: right;</p>
+                <p style="text-align: right;">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. 
+                    Atque similique architecto totam doloremque, est explicabo, 
+                    eos voluptatibus odit possimus tempora obcaecati quis harum 
+                    dolor vitae itaque ex qui beatae accusamus.</p>
+
+            <h3>Propriedade 'text-decoration'</h3>
+                
+                <p>Adiciona ou remove linhas do nosso texto: sejam linhas em cima,
+                    no meio, ou embaixo. Pode ser escrita em apenas uma linha seguindo a ordem.
+                </p>
+                <p>É uma propriedade abreviada de:</p>
+                <ul>
+                    <li>text-decoration-line</li>
+                    <li>text-decoration-style</li>
+                    <li>text-decoration-color</li>
+                    <li>text-decoration-thickness</li>
+                </ul>
+
+                <p>Valores da tag de âncora (a) são os únicos que já vem com 
+                    esta propriedade alterada.
+                </p>
+                <a href="#" style="text-decoration: none;">
+                    Link de Exemplo (style="text-decoration: none;) </a><br>
+
+                <a href="#">Link de Exemplo (sem alterar 'text-decoration')</a>
+
+                <br>  
+            
+            <h3>Propriedade 'text-indent'</h3>
+                
+                <p>Define o recuo da primeira linha do texto, como no exemplo a seguir:
+                </p>
+
+                <p style="text-indent: 20px;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                    reprehenderit praesentium commodi minus 
+                    nemo, sit aut, suscipit animi sequi officiis maxime! 
+                    Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+
+            <h3>Propriedade 'letter-spacing'</h3>
+                <p>letter-spacing: 10px;</p>
+                <p style="letter-spacing: 10px;">Adiciona um espaçamento entre cada CARACTERE do seu texto. Como 
+                        o nome já diz, espaçamento entre as letras.
+                </p>
+
+            <h3>Propriedade 'word-spacing'</h3>
+                <p>word-spacing: 10px;</p>
+                <p style="word-spacing: 10px;">Adiciona um espaçamento entre cada PALAVRA do seu texto. Como 
+                        o nome já diz, espaçamento entre as palavras.
+                </p>
+
+            <h3>Propriedade 'white-spacing'</h3>
+
+                <p>Define como os espaços em branco do texto de um determinado
+                    elemento é tratado. Exemplos.
+                </p>
+
+                <p>white-space: normal;</p>
+                <p style="white-space: normal;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+
+                <p>white-space: nowrap;</p>
+                <p style="white-space: nowrap;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+
+                <p>white-space: pre;</p>
+                <p style="white-space: pre;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+
+                <p>white-space: pre-line;</p>
+                <p style="white-space: pre-line;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>]
+                
+                <p>white-space: pre-wrap;</p>
+                <p style="white-space: pre-wrap;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+
+                <p>white-space: break-spaces;</p>
+                <p style="white-space: break-spaces;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+                
+                <p>white-space: normal;</p>
+                <p style="white-space: normal;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam 
+                reprehenderit     praesentium commodi minus 
+                nemo, sit aut, suscipit animi sequi officiis maxime! 
+                Est, omnis fuga voluptatum accusantium dignissimos consectetur esse!</p>
+
+            <h3>Propriedade 'word-wrap'</h3>
+
+                <p>Define, caso uma palavra seja muito grande para caber em uma linha,
+                    se ela será quebrada em qualquer caractere para que uma parte dela fique 
+                    e o restante na próxima, ou se não, toda palavra deve ficar na mesma linha 
+                    e ultrapassar os limites que definimos para o elemento (uma div,
+                    por exemplo).
+                </p>
+                <ul>
+                    <li>word-wrap: normal;</li>
+                    <li>word-wrap: break-word;</li>
+                </ul>
+
+
+            <h3>Propriedade 'word-break'</h3>
+
+                <p>Define quando o nosso texto deve ter uma quebra de linha. 
+                    Exemplos de valores:</p>
+
+                <ul>
+                    <li>word-break: normal;</li>
+                    <li>word-break: break-all;</li>
+                    <li>word-break: keep-all;</li>
+                </ul>
+            
+            <h3>Propriedade 'writing-mode'</h3>
+
+                <p>Define a orientação do texto (vertical ou horizontal). 
+                    Exemplos de valores:</p>
+
+                <ul>
+                    <li>writing-mode: horizontal-tb;</li>
+                    <li>writing-mode: vertical-rl;</li>
+                    <li>writing-mode: vertical-lr;</li>
+                </ul>
+                
+            <h3>Propriedade 'text-overflow'</h3>
+
+                <p>Define a amostragem do texto sobre uma determinada área.</p>
+                    
+                    <div class="overflow"></div>
+                    <p>text-overflow: clip;</p>
+                    <p class="overflow" id="text-clip">
+                        Chega de saudade a realidade é que sem ela não há paz.</p>
+
+                    <p>text-overflow: ellipsis;</p>
+                    <p class="overflow" id="text-ellipsis">
+                        Chega de saudade a realidade é que sem ela não há paz.</p>
+
+                    <p>text-overflow: 'string'; (só funciona no firefox)</p>
+                    <p class="overflow" id="text-string">
+                        Chega de saudade a realidade é que sem ela não há paz.</p>
+    <br>
+    </div>
+
+    <br>
+    <div id="aula-07">
+        <h2>Aula 07</h2>
+
+            <h3>Efeito sombra nos Elementos</h3>
+    
+                <p>Propriedade 'box-shadow'</p>
+
+                    <p>Pode ser definida uma sombra interna junto ou separada
+                        da externa, só colocando o 'inset' no começo da linha.
+                    </p>
+                    <div id="shadow">
+                    </div>
+                
+                <br>
+                <p>Propriedade 'box-shadow'</p>
+                    <p>Esta propriedade é usada para quando temos uma imagem 
+                        com fundo png (colocar a sobra direto no elemento da imagem).<br><br>
+                        background-color: transparent;<br>
+                        filter: drop-shadow(10px 10px 5px grey);
+                    </p>
+                <br>
+                    <img src="assets/images/incrivel.png" alt="" id="london-shadow">
+
+                    <br>
+                    <br>
+
+            <h3>Efeito sombra nos Textos</h3>
+
+                <p>Propriedade 'text-shadow'</p>
+                <p id="teste-titulo">Bem vindo à Trilha de CSS na DIO!</p>
+
+                <br>
+    </div>
+    <br>
+    <div id="aula-08">
+        <h2>Aula 08 - Diversos</h2>
+            <h3>Propriedade 'opacity'</h3>
+                <p>Define o nível de opacidade (transparência) de um elemento. 
+                    (de 0.0 à 1.0)</p>
+                <strong>Utilizar canal alpha das cores (hsla, rgba) caso queira colocar só no 
+                    elemento 'background-color'.
+                </strong>
+
+                <p>Exemplo:</p>
+                <div class="exe-opacity">
+
+                    <h4>Trilha de CSS</h4>
+                    <p>Conhecendo as propriedades CSS uma a uma.</p>
+
+                    <img src="assets/images/london.jpg" id="london-opacity" alt="">
+
+                </div>
+
+            <h3>Propriedade 'overflow'</h3>
+                <p>Quando algo não cabe dentro de um container (div, por exemplo),
+                    a propriedade 'overflow' pode auxiliar, exemplo:
+                </p>
+
+                <div class="exe-overflow">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        In corrupti dolorem quam, culpa facilis sint, 
+                        dignissimos fugiat, nobis at voluptatem amet deleniti. 
+                        Et consectetur modi eos, amet alias praesentium voluptas!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        In corrupti dolorem quam, culpa facilis sint, 
+                        dignissimos fugiat, nobis at voluptatem amet deleniti. 
+                        Et consectetur modi eos, amet alias praesentium voluptas!
+                    </p>
+
+                </div>
+                <br>
+                <ul>São quatro valores possíveis para a propriedade:
+                    <li>overflow: visible; // deixa visivel (transborda o elemento)</li>
+                    <li>overflow: hidden; // esconde o transbordo</li>
+                    <li>overflow: scroll; // permite um scroll (x e y) dentro do elemento</li>
+                    <li>overflow: auto; // dá o scroll só onde é necessário</li>
+                </ul>
+            <br>
+
+            <h3>Redefinindo as propriedades padrões dos Navegadores</h3>
+    
+                <p>Reset CSS é uma folha de estilos que irá sobrepor todas as 
+                    propriedades de estilo CSS que os navegadores colocam
+                    por padrão nos elementos, ajudadndo com que sites tenham o 
+                    mesmo estilo/design em todos os navegadores.
+                </p>
+                <a target="_blank" href="http://meyerweb.com/eric/tools/css/reset/">
+                    Link disponibilizado por Eric Meyer, free.
+                </a>
+                <br>
+                <p>Este link contém o código padrão que retira todos os estilos
+                    padrões aplicado a todo e qualquer elemento CSS para 
+                    <strong>QUALQUER</strong> navegador.
+                </p>
+                <q>Não está ativa em nosso projeto pois já soube tarde desta
+                   ferramenta. hehehhe</q>
+                <br>
+                <br>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <br>
+        <p>-------------------- Rodapé --------------------</p>
+    </footer>
+        </body>
+</html>
